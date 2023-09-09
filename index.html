@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="name-input-container" class="name-input-container">
+        <!-- <label for="name">Enter your name:</label> -->
+        <h2 style="color: #ff0000;">ISF Quiz Application</h2>
+        <input type="text" id="name" class="name-input" placeholder="Enter Your Name" required="required">
+        <button id="start-button">Start Quiz</button>
+    </div>
+    <div class="quiz-container" id="quiz-container">
+        <h1>Quiz App</h1>
+        <div id="question-container">
+            <p id="question">Question goes here</p>
+        </div>
+        <div id="options-container" class="options">
+            <!-- Options will be added dynamically using JavaScript -->
+        </div>
+        <p class="score" style="display: none;">Score: <span id="score">0</span></p>
+        <p class="timer">Time Left: <span id="timer" style="color: red;font-weight: bold;">10</span> Seconds</p>
+        <button id="next-button" style="display: none;">Next</button>
+    </div>
+
+    <!-- Final score card (hidden by default) -->
+    <div id="final-score-card" class="score-card">
+        <h2>Your Final Score</h2>
+        <p>Name: <span id="user-name">Kashan Malick</span></p>
+        <p>Your Score <span id="final-score" style="font-weight: bold;color: green;">0</span> Out Of
+            <span id="total-questions" style="font-weight: bold;color: red;">0</span></p>
+        <div class="retry-button-container">
+            <button id="retry-button">Retry</button>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
